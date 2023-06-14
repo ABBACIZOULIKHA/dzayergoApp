@@ -10,8 +10,8 @@ const AjouterCarte = () => {
           <Link to='/'>  <img src={logo} className=" ml-10  w-46 h-16" alt="" /> </Link> 
           <p> NomPrenom </p>
           <div className="flex flex-row justify-between ">
-          <button className="bg-tchini px-12 "> hi </button>
-          <button className="bg-beige px-12  "> hi </button>
+          <button className="bg-tchini px-12 "> hiiiiiiiiiii </button>
+          <button className="bg-beige px-12  "> hello </button>
           </div>
          
 
