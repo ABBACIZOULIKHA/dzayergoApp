@@ -8,6 +8,8 @@ const Statistics = () => {
         <div className="w-[78%] h-screen ml-[22%]  flex flex-col ">
             <Header props={'Statistiques'}/>
 
+
+
             <div className="">
             </div>
              
