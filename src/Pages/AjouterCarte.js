@@ -8,7 +8,7 @@ const AjouterCarte = () => {
     <div className=" h-screen w-full flex flex-col  ">
          <div className="h-24 bg-violet w-full flex flex-row justify-between items-center py-3 px-2">
           <Link to='/'>  <img src={logo} className=" ml-10  w-46 h-16" alt="" /> </Link> 
-          <p> Nom </p>
+          <p> NomPrenom </p>
           <div className="flex flex-row justify-between ">
           <button className="bg-tchini px-12 "> hi </button>
           <button className="bg-beige px-12  "> hi </button>
