@@ -16,7 +16,7 @@ export default function securité() {
                <input className='rounded-full px-10  border-2 border-lightgris bg-gray-100' type="password" />
                </div>
    
-                <button className='bg-red-700 mr-40 ml-10 py-2 my-14 shadow-md w-44 text-white rounded-full '>Modifier</button> 
+                <button className=' mr-40 ml-10 py-2 my-14 shadow-md w-44 text-white rounded-full bg-rose'>Modifier</button> 
       </div>
    
 

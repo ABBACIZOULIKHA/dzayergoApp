@@ -60,7 +60,7 @@ const Sidebar = () => {
          
             <div className="flex flex-row items-end space-x-10 pl-8 py-3 hover:bg-white hover:bg-opacity-25 hover:border-l-4 hover:border-l-white  transition duration-500 ease-in-out   "> 
                 <img src={ajouter} className="w-6" alt="stats" />
-                <Link to="/AjouterCarte">  <p> Ajouter une carte</p>  </Link> 
+                <Link to="/ListesCartes">  <p> Gestion des cartes </p>  </Link> 
                 
             </div>
       

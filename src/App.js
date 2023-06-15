@@ -11,6 +11,7 @@ import History from './Pages/History';
 import AjouterCarte from './Pages/AjouterCarte'
 import Notification from './Pages/Notification';
 import Login from './Pages/Login';
+import ListesCartes from './Pages/ListesCartes'
 import {BrowserRouter as Router , Route, Routes} from "react-router-dom";
 
 
@@ -30,7 +31,7 @@ function App() {
            <Route path="/AjouterCarte"  element={<AjouterCarte/>}/>
            <Route path="/GestionEmploye" element={<GestionEmploye/>}/>
            <Route path="/History"  element={<History/>}/>
-
+           <Route path="/ListesCartes"  element={<ListesCartes/>}/>
            <Route path="/Notification"  element={<Notification/>}/>
            </Routes>  
      </Router>

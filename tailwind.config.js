@@ -28,7 +28,7 @@ module.exports = {
       'black': '#000000' , 
       'lightgris' : '#D9D9D9' ,
       'textgris' : '#9FA2B4' , 
-       
+      'textgrisfoncé' : '#565656' , 
     }, 
 
   },
