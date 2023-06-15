@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
  const Header = ({props}) => {
   return (  
-    <div className='flex flex-row justify-between items-center mx-10  h-16 mb-12 '>
+    <div className='flex flex-row justify-between items-center mx-10  h-16 mb-5 '>
      
       <h1 className='text-2xl font-bold mt-4'>{props}</h1>
 
