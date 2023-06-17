@@ -9,7 +9,7 @@ export default function searchCarte() {
             <img className="w-5 h-5" src={img1} alt=""/>
           <input className='px-2' placeholder='Rechercher'/>
           </div>
-          <Link to="/AjouterCarte">  <button className='bg-rose text-white text-sm rounded-full mr-4 py-2 px-4'>Ajouter une carte</button>  </Link> 
+          <Link to="/AjouterCarte">  <button className='bg-rose text-white text-sm rounded-full mr-4 py-2 px-4 font-semibold hover:font-bold hover:scale-110'>Ajouter une carte</button>  </Link> 
           
          </div>
      
