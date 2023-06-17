@@ -14,6 +14,7 @@ import Logout from "../Images/Icons/logout_icon.png"
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+    
     return ( 
     <div className="h-screen w-[22%] flex flex-col fixed bg-violet rounded-tr-2xl rounded-br-2xl">
         <div className="p-8 flex items-center justify-center">

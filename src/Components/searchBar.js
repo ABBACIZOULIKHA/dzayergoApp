@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img1 from "../Images/Icons/research_icon.png"
 import img2 from "../Images/Icons/affiche_icon.png"
-export default function searchBar() {
+import AddEmployé from './AddEmployé';
+export default function SearchBar() {
+  const [showMyModal,setshowMyModal] =useState(false) ;
   return (
     <div className='flex flex-col'>
         <div className='flex flex-row-reverse'>
@@ -9,7 +11,7 @@ export default function searchBar() {
             <img className="w-5 h-5" src={img1} alt=""/>
           <input className='px-2' placeholder='Rechercher'/>
           </div>
-          <button className='bg-rose text-white text-sm rounded-full mr-4 py-2 px-4'>Ajouter</button>
+          <button onClick={()=>setshowMyModal(true)} className='bg-rose text-white text-sm rounded-full mr-4 py-2 px-4'>Ajouter</button>
          
           <div className='flex flex-row items-center gap-2 mr-72'>
             <h2>Afficher</h2>
@@ -22,7 +24,7 @@ export default function searchBar() {
 
           
         </div>
-     
+     <AddEmployé visible={showMyModal}/>
     </div>
   )
 }
