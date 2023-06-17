@@ -21,7 +21,7 @@ export default function AddEmployé({visible}) {
   return (
     <div className='fixed inset-0 bg-lightgris bg-opacity-5 backdrop-blur-sm flex justify-center items-center'>
       <div className='border-4 border-tchini rounded-xl flex flex-col bg-lightgris px-5 py-8'>
-         <h1 className='text-xl mb-3'>Ajouter employé</h1>
+         <h1 className='text-xl mb-3'>Ajouter employé hiiiiiii </h1>
          <p className='text-textgrisfoncé'>l'employé ajouté a des droits de modification du contenu </p>
         
         <div className='flex flex-col gap-5 my-3'>
