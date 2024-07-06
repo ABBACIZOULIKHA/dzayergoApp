@@ -37,7 +37,7 @@ function App() {
            <Route path="/GestionEmploye" element={<GestionEmploye/>}/>
            <Route path="/History"  element={<History/>}/>
            <Route path="/ListesCartes"  element={<ListesCartes/>}/>
-           <Route path='/DetailPoint1/:carteid/:point'  element={<DetailPoint1/>}/>
+           <Route path='/DetailPoint1/:point'  element={<DetailPoint1/>}/>
            <Route path='/DetailPoint2/:point'  element={<DetailPoint2/>}/>
            <Route path="/DetailPoint3"  element={<DetailPoint3/>}/>
            <Route path="/Notification"  element={<Notification/>}/>

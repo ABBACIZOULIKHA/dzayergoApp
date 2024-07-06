@@ -10,7 +10,8 @@ export default function TablePoint() {
    const [Points,setPoints] = useState([]) ;
    const [carteid,setCarteid] = useState("NcViEpWvQYl9N9lN3ZQN") ;
 
-   const PointsCollectionRef = collection(db,"Carte",carteid,"Lieu") ;
+   //const PointsCollectionRef = collection(db,"Carte",carteid,"Lieu") ;
+   const PointsCollectionRef = collection(db,"Lieu") ;
    useEffect(()=>{  
      const getPoints =async ()=>{
       try{
@@ -40,7 +41,7 @@ export default function TablePoint() {
      <div className='flex flex-col mx-10 my-7 text-sm   '>
         <div  className='shadow-xl flex flex-row gap-32   py-3 mb-2 rounded-full bg-[#FBBE85]'><div className='ml-4 w-32'> point d'intret</div> <div  className='w-20'>Localisation </div> <div className='w-20'>Categorie</div><div> Action</div> </div>
         {Points.map((point)=>(
-        <div  className='shadow-xl flex flex-row gap-32  border-2 py-2 mb-1 rounded-full border-lightgris '><div className='ml-4 w-32'> {point.Nom}</div> <div  className='w-20'>{point.Wilaya} </div> <div className='w-20'>{point.Categorie}</div><div className='flex flex-row'>   <div className='mx-2'><Link to={'/DetailPoint1/'+point.Carteid+'/'+point.id}><img className='w-6 h-5' src={img1}/></Link> </div> <div></div> <img  className='w-6 h-5' src={img2}/></div> </div>
+        <div  className='shadow-xl flex flex-row gap-32  border-2 py-2 mb-1 rounded-full border-lightgris '><div className='ml-4 w-32'> {point.Nom}</div> <div  className='w-20'>{point.Wilaya} </div> <div className='w-20'>{point.Categorie}</div><div className='flex flex-row'>   <div className='mx-2'><Link to={'/DetailPoint1/'+point.id}><img className='w-6 h-5' src={img1}/></Link> </div> <div></div> <img  className='w-6 h-5' src={img2}/></div> </div>
         ))}  
         {/* <div  className='shadow-xl flex flex-row gap-32  border-2 py-2 mb-1 rounded-full border-lightgris '><div className='ml-4 w-32'> Cap Carbon</div> <div   className='w-20'>Béjaia </div> <div className='w-20'>Plage</div><div className='flex flex-row'>     <div className='mx-2'><img  className='w-6 h-5'src={img1}/> </div> <div></div> <img   className='w-6 h-5'src={img2}/></div> </div>
         <div  className='shadow-xl flex flex-row gap-32  border-2 py-2 mb-1 rounded-full border-lightgris'><div className='ml-4 w-32'> Ruines Romain</div> <div   className='w-20'>Tipaza </div> <div className='w-20'>Monument</div><div className='flex flex-row'><div className='mx-2'><img className='w-6 h-5' src={img1}/> </div> <div></div> <img  className='w-6 h-5' src={img2}/></div> </div>

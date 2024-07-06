@@ -4,31 +4,35 @@ import { Link } from 'react-router-dom';
 import SideBarPoint from './SideBarPoint';
 import { db } from '../config/firebase';
 import DetailPhoto from './DetailPhoto';
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 
 
-function Vertualisation  (prop) {
+function Vertualisation  ({prop}) {
   const [Photos,setPhotos] = useState([]) ;
-  const [carteid,setCarteid] = useState("NcViEpWvQYl9N9lN3ZQN") ;
-   
    const {lieu1} = prop ;
-   const PhotosCollectionRef = collection(db,"Carte",carteid,"Lieu","g9K5IqU5s0K7MWCBwr5P","Photos") ;
-   useEffect(()=>{  
-     const getPhotos =async ()=>{
-      try{
-         const data = await getDocs(PhotosCollectionRef) ;
-         const filteredData = data.docs.map((doc)=>({
-             ...doc.data(),
-             id: doc.id ,
-         })) ;
-        // console.log(filteredData) ;
-        console.log(lieu1)
-        setPhotos(filteredData) ;
-        // console.log(employés) ;
-      }catch(err){
-        console.error(err) ;
+   let q ;
+   
+   const PhotosCollectionRef = collection(db,"PhotoLieu") ;
+   q = query(PhotosCollectionRef,where('Lieuid','==',"45sV9Kr1BVwddFtcYPGw"))
+   const getPhotos =async ()=>{
+    try{
+       const data = await getDocs(q) ;
+       var photoArray = [] ;
+       for(var snap of data.docs){
+        var dd = snap.data() ;
+        dd.ID = snap.id ;
+        photoArray.push({...dd}) ;
+       }
+      if(photoArray.length === data.docs.length){
+        setPhotos(photoArray) ;
       }
-     }
+    }catch(err){
+      console.error(err) ;
+    }
+   }
+
+   useEffect(()=>{  
+     
      getPhotos() ;
    },[]);
   

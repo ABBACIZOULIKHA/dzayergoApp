@@ -8,9 +8,9 @@ import { doc, getDoc } from 'firebase/firestore';
 
 
 function Presentation  (props) {
-    const {props1,props2} = props ;
+    const {props2} = props ;
     const [Point,setPoint] = useState([]) ;
-    const PointCollectionRef = doc(db,"Carte",props1,"Lieu",props2) ;
+    const PointCollectionRef = doc(db,"Lieu",props2) ;
         useEffect(()=>{  
       const getPoint =async ()=>{
        try{
